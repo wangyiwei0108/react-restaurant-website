@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Noto Sans TC', sans-serif;
+  scroll-behavior: smooth;
+
+  @include respond(-large) {
+    font-size: 56.25%;
+  }
+
+  @include respond(-medium) {
+    font-size: 50%;
+  }
+
+  @include respond(-largest) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $color-primary-5;
+}
+
+:target {
+  padding-top: 7rem;
+  margin-top: -7rem;
+}

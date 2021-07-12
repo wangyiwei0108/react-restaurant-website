@@ -1,0 +1,191 @@
+.navbar {
+  &__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 7rem;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    padding: 0 4rem;
+    background-color: $color-primary-1;
+    user-select: none;
+
+    @include respond(-small) {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 7.5rem auto auto;
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+    cursor: pointer;
+    color: $color-primary-2;
+    justify-self: self-start;
+
+    @include respond(-small) {
+      padding-left: 4rem;
+    }
+
+    & h1 {
+      position: absolute;
+      top: 1.2rem;
+      font-size: 3.5rem;
+      letter-spacing: 1.5px;
+      font-family: 'Satisfy', cursive;
+    }
+  }
+
+  &__links {
+    display: flex;
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2 ;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+
+    @include respond(-small) {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      display: none;
+      flex-direction: column;
+      justify-self: center;
+      text-align: center;
+      background-color: $color-primary-7;
+    }
+
+    &.active {
+      @include respond(-small) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 62vh;
+      }
+    }
+  }
+
+  &__link {
+    list-style: none;
+
+    @include respond(-small) {
+      width: 100%;
+      transition: all 100ms ease-in;
+
+      &:hover {
+        background-color: $color-primary-2;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @include respond(-small) {
+        margin-right: 0;
+        margin-bottom: 2vh;
+      }
+    }
+
+    & a {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      text-decoration-thickness: 0.2rem;
+      text-decoration-color: transparent;
+      color: $color-primary-2;
+      font-weight:bold;
+      transition: all 100ms ease-in;
+      
+
+      @include respond(-small) {
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.2rem;
+        text-decoration-color: $color-primary-2;
+
+        @include respond(-small) {
+          text-decoration: none;
+          color: $color-primary-7;
+        }
+      }
+    }
+    
+    & div {
+      padding: 2rem 0;
+    }
+  }
+
+  &__menu {
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+
+    @include respond(-small) {
+      display: flex;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      padding-right: 4rem;
+    }
+  }
+
+  &__footer-container {
+    color: $color-primary-1;
+    font-size: 1.5rem;
+    background-color: $color-primary-2;
+    display: none;
+  
+    & li {
+      list-style: none;
+    }
+  
+    & a {
+      text-decoration: none;
+      color: $color-primary-1;
+    }
+  
+    @include respond(-small) {
+      display: none;
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+  
+    &.active {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+      padding: 5.5rem 0;
+      height: 30vh;
+    }
+  }
+  
+  &__info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  &__social-media {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+  
+    & li {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+  
+  &__right {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    align-self: flex-end;
+  }
+}

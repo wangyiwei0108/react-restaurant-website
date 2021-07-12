@@ -1,0 +1,149 @@
+.intro {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: 15.5rem;
+    margin-right: 15rem;
+    margin-left: 15rem;
+    position: relative;
+
+    @include respond(-large) {
+      margin-left: 14rem;
+      margin-right: 14rem;
+    }
+
+    @include respond(-medium) {
+      margin-left: 11rem;
+      margin-right: 11rem;
+    }
+
+    @include respond(-small) {
+      margin-left: 6rem;
+      margin-right: 6rem;
+      margin-top: 4.5rem;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-row-gap: 2rem;
+      position: initial;
+    }
+
+    @include respond(-smallest) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+
+  &__imgs {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include respond(-small) {
+      grid-row: 2 / 3;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__img {
+    height: 46%;
+    border: 6px solid $color-primary-5;
+
+    @include respond(-small) {
+      width: 26vw;
+      height: auto;
+      border: none;
+    }
+
+    &--1 {
+      position: absolute;
+      z-index: 200;
+      bottom: 5.5rem;
+      left: 0px;
+
+      @include respond(-small) {
+        position: initial;
+      }
+    }
+
+    &--2 {
+      position: absolute;
+      z-index: 500;
+      bottom: 1.5rem;
+      left: 8rem;
+
+      @include respond(-large) {
+        left: 7.5rem;
+      }
+
+      @include respond(-medium) {
+        left: 7rem;
+      }
+
+      @include respond(-small) {
+        position: initial;
+      }
+    }
+
+    &--3 {
+      position: absolute;
+      z-index: 60;
+      bottom: 9.5rem;
+      left: 14rem;
+    }
+
+    @include respond(-small) {
+      position: initial;
+    }
+  }
+
+  &__content {
+    justify-self: flex-end;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include respond(-small) {
+      grid-column: 1 / 2;
+      margin-bottom: 5rem;
+      margin-top: 5rem;
+    }
+
+    & h1 {
+      margin-bottom: 3rem;
+      color: $color-secondary-1;
+    }
+
+    & h3 {
+      margin-bottom: 2rem;
+      color: $color-primary-2
+    }
+
+    & p {
+      margin-bottom: 3rem;
+      color: $color-primary-4
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: 2px solid $color-primary-4;
+    padding: 0.7rem 1.7rem;
+    border-radius: 2em;
+    color: $color-primary-4;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-primary-4;
+      color: white;
+    }
+  }
+}

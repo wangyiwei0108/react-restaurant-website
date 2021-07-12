@@ -1,0 +1,163 @@
+.menu {
+
+  &__wrapper {
+    padding-top: 4rem;
+  }
+
+  &__container {
+    background-color: $color-primary-7;
+    border: 8px double $color-primary-3;
+    border-radius: 2em;
+    display: flex;
+    padding-top: 5.5rem;
+    padding-bottom: 8rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    flex-direction: column;
+    margin: 0 15rem;
+
+    @include respond(-large) {
+      margin: 0 14rem;
+    }
+
+    @include respond(-medium) {
+      margin: 0 11rem;
+    }
+
+    @include respond(-small) {
+      margin: 0 6rem;
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
+    }
+
+    @include respond(-smallest) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+  }
+
+  &__intro {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    & h1 {
+      margin-bottom: 1.6rem;
+      font-size: 4rem;
+      color: $color-primary-2;
+    }
+  }
+
+  &__types {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    color: $color-primary-2;
+    font-size: 1.3rem;
+
+    @include respond(-smallest) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+
+      @include respond(-large) {
+        margin-right: 4rem;
+      }
+
+      @include respond(-small) {
+        margin-right: 3rem;
+      }
+
+      @include respond(-smallest) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    & img {
+      width: 6rem;
+      filter: invert(57%) sepia(97%) saturate(380%) hue-rotate(323deg) brightness(87%) contrast(94%);
+      margin-bottom: 1rem;
+
+      @include respond(-small) {
+        width: 5rem;
+      }
+
+      @include respond(-smallest) {
+        width: 4rem;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__dishes {
+    display: none;
+
+    &.active {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 5.5rem;
+      grid-row-gap: 3rem;
+
+      @include respond(-small) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 4.2rem;
+      }
+    }
+  }
+
+  &__dish {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: max-content 1fr auto;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 0.5rem;
+    align-items: center;
+    position: relative;
+
+    & h3 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      color: $color-primary-2;
+    }
+
+    & h4 {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      color: $color-primary-2;
+      align-self: flex-start;
+    }
+
+    & p {
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+      color: $color-primary-4;
+    }
+  }
+
+  &__icon {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    color: $color-primary-2;
+    align-self: flex-start;
+    position: absolute;
+    top: 0.6rem;
+    left: 0.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
