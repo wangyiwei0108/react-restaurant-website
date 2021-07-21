@@ -41,7 +41,7 @@ const Navbar = () => {
           <li><a href="/"><i className='fab fa-youtube'/></a></li>
           <li><a href="/"><i className='fab fa-twitter'/></a></li>
         </ul>
-        <p className="navbar__right">© 2021 Foodie All Rights Reserved.</p>
+        <p className="navbar__right">© 2021 Flex Muel's All Rights Reserved.</p>
       </div>
     </div>
   )
