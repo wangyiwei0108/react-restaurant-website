@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# 餐館官網
+運用 CSS、SASS 純手刻的 landing page。目的是透過製作此網頁，練習切版技巧以及響應式設計。網頁的 UI 部分，主要參考國外[模板主題](http://www.themezaa.com/html/leadgen/demo/restaurant/index.html)，並另行額外刪減，做些微調整。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## DEMO
+[前往頁面](https://wangyiwei0108.github.io/react-restaurant-website/)
 
-## Available Scripts
+## 使用技術
+- HTML / CSS / JS
+- SASS
+- React
 
-In the project directory, you can run:
+## 實現功能
+- Navbar：根據畫面尺寸隱藏或顯示漢堡選單
+- Menu：可藉由點擊 Menu 的種類，更換菜色
+- Gallery：將多張照片以不同大小整齊排列；點選可放大顯示
+- Chefs：以輪播方式呈現所有廚師的介紹
 
-### `yarn start`
+## 學習記錄
+- 透過 window.inner 來設定 Navbar 漢堡選單隱藏或顯示的斷點
+- 以 useState 的值（true / false），作為控制 className 變換的開關
+- 透過 :target 設定，解決因為 fixed Navbar 而產生錨點偏移的問題
+- 運用 CSS Grid 實現收納不同尺寸照片的 gallery
+- 藉由 react-responsive-carousel 實現輪播
+- 以 gh-pages 部署至 Github
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![GITHUB](https://github.com/wangyiwei0108/react-aqi-search/blob/master/src/assets/res.png)
