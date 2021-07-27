@@ -22,5 +22,5 @@
 - 運用 CSS Grid 實現收納不同尺寸照片的 gallery
 - 藉由 react-responsive-carousel 實現輪播
 - 以 gh-pages 部署至 Github
-
+---
 ![GITHUB](https://github.com/wangyiwei0108/react-restaurant-website/blob/master/src/assets/res.png)
