@@ -16,7 +16,7 @@
 - Chefs：以輪播方式呈現所有廚師的介紹
 
 ## 學習記錄
-- 透過 window.inner 來設定 Navbar 漢堡選單隱藏或顯示的斷點
+- 透過 window.innerWidth 來設定 Navbar 漢堡選單隱藏或顯示的斷點
 - 以 useState 的值（true / false），作為控制 className 變換的開關
 - 透過 :target 設定，解決因為 fixed Navbar 而產生錨點偏移的問題
 - 運用 CSS Grid 實現收納不同尺寸照片的 gallery
